@@ -14,34 +14,13 @@ for (let i = 0; i < 4; i++) {
     alert(`Success, the number was ${userNumber}! Attempts: ${counter}`);
     break;
   } else {
-    counter++;
-    userNumber = prompt("Wrong!!! Try Again!");
     if (counter == 2) {
       alert(
         `Sorry, you failed to guess the number in three attempts. The number was ${randomNumber}!`
       );
+      break;
     }
+    counter++;
+    userNumber = prompt("Wrong!!! Try Again!");
   }
 }
-
-// if (randomNumber == userNumber) {
-//   alert(`Success, the number was ${userNumber}! Attempts: 1`);
-// } else {
-//   userNumber = prompt("Wrong!!! Try Again!");
-//   if (randomNumber == userNumber) {
-//     alert(`Success, the number was ${userNumber}! Attempts: 1`);
-//   } else {
-//     userNumber = prompt("Wrong!!! Try Again!");
-//   }
-// }
-
-// for (let i = 1; i < 4; i++) {
-//   let counter = 0;
-//   if (randomNumber == userNumber) {
-//     alert("Success! You win!", counter, "attempts");
-//   } else {
-//     prompt("Wrong!!! Try Again!", counter);
-//   }
-
-//   counter++;
-// }
